@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/shape_of_bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        >
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="15dp"
+            android:src="@drawable/nav_icon_white_return"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提交订单"
+            android:textSize="16sp"
+            android:textColor="#333"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <android.support.v7.widget.CardView
+        app:cardCornerRadius="4dp"
+        android:layout_width="match_parent"
+        android:background="#ffffff"
+        android:layout_height="120dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="75dp"
+        >
+        <android.support.percent.PercentRelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
+            <TextView
+                android:id="@+id/choose_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="选择收货地址 >"
+                android:textSize="18dp"
+                app:layout_marginTopPercent="12%"
+                />
+            <View
+                android:layout_below="@+id/choose_address"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ededed"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="立即送出"
+                android:textColor="#000"
+                android:textSize="15sp"
+                app:layout_marginTopPercent="66%"
+                />
+            <TextView
+                android:id="@+id/arrival_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="大约15:20到达"
+                android:textColor="#4176ff"
+                android:textSize="15sp"
+                app:layout_marginTopPercent="66%"
+                app:layout_marginLeftPercent="66%"
+
+                />
+        </android.support.percent.PercentRelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView_content"
+        app:cardCornerRadius="4dp"
+        android:layout_width="match_parent"
+        android:background="#ffffff"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="205dp"
+        android:layout_marginBottom="10dp"
+
+        >
+        <android.support.percent.PercentRelativeLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
+            <TextView
+                android:id="@+id/bill_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="肯德基宅慢送"
+                android:textSize="14sp"
+                />
+            <View
+                android:layout_below="@+id/bill_name"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ededed"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_below="@+id/bill_name"
+                android:id="@+id/bill_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"/>
+
+
+            <View
+                android:layout_below="@+id/bill_rl"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ededed"/>
+
+            <TextView
+                android:id="@+id/bill_shippingFee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="配送费"
+                android:textColor="#000"
+                android:textSize="14sp"
+                android:layout_marginTop="25dp"
+                android:layout_below="@id/bill_rl"
+                />
+            <TextView
+                android:id="@+id/bill_food_shippingFee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥173"
+                android:gravity="right"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:textSize="14sp"
+                android:layout_alignTop="@id/bill_shippingFee"
+                android:layout_alignParentRight="true"
+                />
+            <View
+                android:layout_below="@+id/bill_shippingFee"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ededed"/>
+            <TextView
+                android:id="@+id/bill_rule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="优惠规则"
+                android:textColor="#666"
+                android:textSize="12sp"
+                android:layout_marginTop="25dp"
+                android:layout_below="@id/bill_shippingFee"
+                />
+            <TextView
+                android:id="@+id/bill_food_sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥173"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:gravity="right"
+                android:layout_alignTop="@id/bill_rule"
+                android:layout_alignParentRight="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="小计"
+                android:textColor="#333"
+                android:layout_toLeftOf="@+id/bill_food_sum"
+                android:layout_alignBottom="@id/bill_food_sum"
+                />
+            <View
+                android:layout_below="@+id/bill_food_sum"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffffff"
+                android:layout_marginBottom="10dp"
+                />
+        </android.support.percent.PercentRelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_below="@id/cardView_content"
+        app:cardCornerRadius="4dp"
+        android:layout_width="match_parent"
+        android:background="#ffffff"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="65dp"
+        >
+
+        <android.support.percent.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/bill_remarks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="备注"
+                android:textColor="#000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/bill_remarks_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/bill_remarks"
+                android:gravity="right"
+                android:text="口味、偏好等要求 >"
+                android:textColor="#666"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/bill_tableware_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bill_remarks"
+                android:layout_marginTop="30dp"
+                android:text="餐具数量"
+                android:textColor="#000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/choose_tableware"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/bill_tableware_num"
+                android:gravity="right"
+                android:text="未选择"
+                android:textColor="#666"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/bill_pay_way"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bill_tableware_num"
+                android:layout_marginTop="30dp"
+                android:text="支付方式"
+                android:textColor="#000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/bill_pay_online"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/bill_pay_way"
+                android:gravity="right"
+                android:text="在线支付"
+                android:textColor="#666"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/bill_pay_way"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="15dp"
+                android:background="#ffffff" />
+        </android.support.percent.PercentRelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
+</ScrollView>
+<android.support.percent.PercentRelativeLayout
+    android:layout_width="match_parent"
+    android:layout_alignParentBottom="true"
+    android:layout_height="65dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+        <android.support.percent.PercentRelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:background="#4d4d4d"
+            >
+            <TextView
+                android:id="@+id/bill_productSumPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="合计￥0.0"
+                android:textSize="18sp"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:layout_alignParentRight="true"
+                android:gravity="right"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                />
+
+        </android.support.percent.PercentRelativeLayout>
+
+        <TextView
+
+            android:id="@+id/tv_goPay"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="45dp"
+            android:background="#FFD161"
+            android:text="去结算"
+            android:textSize="16sp"
+            android:textColor="#333"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_shifu"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/be_shifu"
+        />
+
+</android.support.percent.PercentRelativeLayout>
+</android.support.percent.PercentRelativeLayout>

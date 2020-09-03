@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   >
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="#ffd161">
+        <TextView
+            android:id="@+id/tv_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="10dp"
+            android:text="我要点餐"
+            android:textSize="18dp"
+            android:layout_gravity="center"
+            android:textColor="#fff"/>
+    </android.support.v7.widget.Toolbar>
+
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/myViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <View
+        android:layout_above="@+id/bottom_"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#cfcfcf"
+        />
+
+    <LinearLayout
+        android:id="@+id/bottom_"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="#fff"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/pic_item_home"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:src="@drawable/home"/>
+            <TextView
+                android:id="@+id/tv_item_home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:text="主页"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/pic_item_more"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:src="@drawable/dingdan"/>
+            <TextView
+                android:id="@+id/tv_item_more"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:text="订单"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/pic_item_me"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:src="@drawable/me"/>
+            <TextView
+                android:id="@+id/tv_item_me"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:text="我的"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

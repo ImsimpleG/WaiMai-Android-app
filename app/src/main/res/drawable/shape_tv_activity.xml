@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 设置一个黑色边框 -->
+    <stroke android:width="1px" android:color="#ef445b"/>
+    <!-- 渐变 -->
+
+    <!-- 设置一下边距,让空间大一点 -->
+    <padding
+        android:left="3dp"
+        android:top="3dp"
+        android:right="3dp"
+        android:bottom="3dp"/>
+
+</shape>

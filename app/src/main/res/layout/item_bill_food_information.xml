@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.example.imsimplegary.waimaiapp.View.RoundImageView
+        android:id="@+id/bill_pic"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/mcd_food2"
+        />
+    <TextView
+        android:id="@+id/bill_food_name"
+        app:layout_marginLeftPercent="20%"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="老鸡腿"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:textSize="14sp"
+        android:layout_alignTop="@id/bill_pic"
+        />
+    <TextView
+        android:id="@+id/bill_ordernum"
+        app:layout_marginLeftPercent="20%"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="x1 份"
+        android:textColor="#000"
+        android:textSize="14sp"
+        android:layout_below="@id/bill_food_name"
+        app:layout_marginTopPercent="5%"
+        />
+    <TextView
+        android:id="@+id/bill_food_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="￥173"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:layout_alignTop="@id/bill_pic"
+        android:layout_alignParentRight="true"
+        />
+
+</android.support.percent.PercentRelativeLayout>
+

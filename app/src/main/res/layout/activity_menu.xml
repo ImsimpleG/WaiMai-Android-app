@@ -1,0 +1,388 @@
+<layout>
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cdlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/barview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/cp_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentScrim="?attr/colorPrimary"
+                app:expandedTitleMarginEnd="64dp"
+                app:expandedTitleMarginStart="48dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+                <ImageView
+                    android:id="@+id/ivBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/mcd"
+                    app:layout_collapseMode="parallax"
+                    app:layout_collapseParallaxMultiplier="1" />
+
+                <android.support.percent.PercentRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    app:layout_collapseMode="parallax"
+                    >
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cardView"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="3dp"
+                        android:layout_width="match_parent"
+                        android:background="#ffffff"
+                        android:layout_height="140dp"
+                        android:layout_marginTop="100dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tv_shop_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:text="店名"
+                                android:textColor="#000"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/time"
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="47dp"
+                                android:src="@drawable/time" />
+
+                            <TextView
+                                android:id="@+id/tv_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginTop="50dp"
+                                android:layout_toRightOf="@id/time"
+                                android:text="配送约20分钟  "
+                                android:textColor="#333"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+
+                            <ImageView
+                                android:id="@+id/money"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="48dp"
+                                android:layout_toRightOf="@id/tv_time"
+                                android:src="@drawable/money" />
+
+                            <TextView
+                                android:id="@+id/tv_money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginTop="50dp"
+                                android:layout_toRightOf="@id/money"
+                                android:text="15￥起送  "
+                                android:textColor="#333"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+
+                            <ImageView
+                                android:id="@+id/phone"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="48dp"
+                                android:layout_toRightOf="@id/tv_money"
+                                android:src="@drawable/phone" />
+
+                            <TextView
+                                android:id="@+id/tv_phone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginTop="50dp"
+                                android:layout_toRightOf="@id/phone"
+                                android:text="000000"
+                                android:textColor="#333"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+
+                            <TextView
+                                android:id="@+id/gg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/time"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="2dp"
+                                android:text="公告：xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx..."
+                                android:textColor="#999"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/gg"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@drawable/shape_tv_activity"
+                                android:text="首单减5"
+                                android:textColor="#ef445b"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/gg"
+                                android:layout_marginLeft="60dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@drawable/shape_tv_activity"
+                                android:text="满30减3"
+                                android:textColor="#ef445b"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/gg"
+                                android:layout_marginLeft="110dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@drawable/shape_tv_activity"
+                                android:text="满50减8"
+                                android:textColor="#ef445b"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/gg"
+                                android:layout_marginLeft="160dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@drawable/shape_tv_activity"
+                                android:text="8.8折起"
+                                android:textColor="#ef445b"
+                                android:textSize="10sp" />
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                    <android.support.v7.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_marginLeftPercent="77%"
+                        app:layout_marginTopPercent="30%"
+                        app:cardElevation="4dp"
+                        app:cardCornerRadius="5dp">
+                        <com.example.imsimplegary.waimaiapp.View.RoundImageView
+                            android:id="@+id/iv_logo"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/mcd"
+                            android:scaleType="centerCrop" />
+                    </android.support.v7.widget.CardView>
+                    <LinearLayout
+                        android:id="@+id/Linearl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:layout_below="@+id/cardView"
+                        >
+                        <TextView
+                            android:id="@+id/buy_food"
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:textSize="18sp"
+                            android:text="点菜"
+                            android:textStyle="bold"
+                            android:textColor="#212121"
+                            />
+                        <TextView
+                            android:layout_weight="1"
+                            android:id="@+id/assess_food"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="16sp"
+                            android:text="评价"
+                            android:textStyle="normal"
+                            android:textColor="#666666"
+                            />
+                        <TextView
+                            android:layout_weight="4"
+                            android:id="@+id/shoper_information"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="16sp"
+                            android:text="商家"
+                            android:textStyle="normal"
+                            android:textColor="#666666"
+                            />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:background="#ececec"
+                        android:layout_below="@id/cardView"
+                        android:layout_marginTop="45dp"
+                        />
+
+                </android.support.percent.PercentRelativeLayout>
+
+                <!-- 设置标题-->
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="25dp"
+                    app:layout_collapseMode="pin"
+                    app:layout_scrollFlags="scroll|enterAlways|snap"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                    <android.support.v7.widget.ButtonBarLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:orientation="horizontal"
+                            >
+                            <TextView
+                                android:id="@+id/header_buy"
+                                android:layout_weight="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:textSize="18sp"
+                                android:text="点菜"
+                                android:textStyle="bold"
+                                android:textColor="#212121"
+                                />
+                            <TextView
+                                android:id="@+id/header_assess"
+                                android:layout_weight="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textSize="16sp"
+                                android:text="评价"
+                                android:textStyle="normal"
+                                android:textColor="#666666"
+                                />
+                            <TextView
+                                android:id="@+id/header_shoper"
+                                android:layout_weight="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textSize="16sp"
+                                android:text="商家"
+                                android:textStyle="normal"
+                                android:textColor="#666666"
+                                />
+                            <View android:layout_weight="3"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.ButtonBarLayout>
+
+
+                </android.support.v7.widget.Toolbar>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="50dp"
+            >
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_product"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+        </android.support.v4.widget.NestedScrollView>
+        <android.support.percent.PercentFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            app:layout_behavior="@string/bottom_sheet_behavior"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:background="#4d4d4d"
+                >
+                <TextView
+                    android:id="@+id/tv_productSumPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥0.0"
+                    android:textSize="20sp"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="70dp"
+                    />
+                <TextView
+                    android:id="@+id/tv_shippingFee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="另需配送费￥2.0"
+                    android:textSize="12sp"
+                    android:textColor="#b7b7b7"
+                    android:layout_marginTop="27dp"
+                    android:layout_marginLeft="70dp"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_goCheck"
+                app:layout_widthPercent="30%"
+                android:layout_height="45dp"
+                android:background="#FFD161"
+                android:text="去结算"
+                android:textSize="16sp"
+                android:textColor="#333"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                app:layout_marginLeftPercent="70%"
+                />
+            <ImageView
+                android:id="@+id/iv_shifu"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/be_shifu"
+                />
+
+        </android.support.percent.PercentFrameLayout>
+    </android.support.design.widget.CoordinatorLayout>
+</layout>
